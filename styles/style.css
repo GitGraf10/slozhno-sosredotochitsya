@@ -1,5 +1,350 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--subtitle-color);
+  background-image: url("../images/cover-image-dark.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  padding-inline: 10px;
+  min-block-size: 668px;
+  block-size: 100vh;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.rec {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  color: var(--accent-color);
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.rec::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: 10px;
+  margin-block-end: 2px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__theme-menu {
+  padding-block-start: 71px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-content: flex-end;
+  gap: 10px;
+  color: var(--accent-color);
+}
+
+.header__theme-menu-item {
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 1.5px 13px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid currentColor;
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.header__title {
+  margin-block-start: 65px;
+  color: var(--main-title-color);
+  font-weight: var(--weight-bold);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+  margin-block-start: 55px;
+  font-weight: var(--weight-bold);
+  line-height: 23.4px;
+}
+
+.title-decor {
+  color: var(--subtitle-color);
+  font-size: 18px;
+  background-color: var(--accent-color);
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+  padding: 40px 10px;
+  line-height: 23.4px;
+}
+
+.why-so-hard {
+  display: grid;
+  gap: 20px;
+}
+
+.what-decreases {
+  display: grid;
+  gap: 20px;
+}
+
+.how-to-concentrate {
+  display: grid;
+  gap: 20px;
+}
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--accent-color);
+  font-weight: var(--weight-bold);
+  font-size: 18px;
+}
+
+.section__list {
+  display: grid;
+  gap: 20px;
+}
+
+.section__subtitle {
+  font-weight: var(--weight-bold);
+}
+
+.section__subheading {
+  font-weight: normal;
+}
+
+.section__text {
+  margin-block-start: 10px;
+  color: var(--main-text-color);
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 10px;
+  inline-size: 100%;
+}
+
+.gallery-container img {
+  inline-size: 100%;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+}
+
+.footer__title {
+  color: var(--main-title-color);
+  font-weight: var(--weight-bold);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (width>=768px) {
+  .header {
+    padding-inline: 0 20px;
+    min-block-size: 1024px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .rec {
+    top: 20px;
+    right: 29px;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu {
+    padding-block-start: 188px;
+  }
+
+  .header__title {
+    margin-block-start: 173px;
+  }
+
+  .header__description {
+    margin-inline-start: auto;
+    margin-block-start: 165px;
+    max-inline-size: 49%;
+  }
+
+  .main {
+    display: grid;
+    gap: 80px;
+    padding: 60px 20px;
+  }
+
+  .why-so-hard {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .what-decreases__title {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .how-to-concentrate {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+
+  .gallery-container img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .img-sunset {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .img-ice-cream {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .img-tape {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .img-books {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .img-street {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width>=1024px) {
+  .header {
+    min-block-size: 768px;
+  }
+
+  .header__theme-menu {
+    padding-inline-start: 20px;
+    padding-block-start: 17px;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+
+  .header__title {
+    margin-block-start: 291px;
+  }
+
+  .header__description {
+    margin-block-start: 132px;
+  }
+
+  .why-so-hard {
+    gap: 11px;
+  }
+
+  .how-to-concentrate {
+    gap: 11px;
+  }
+
+  .what-decreases__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
