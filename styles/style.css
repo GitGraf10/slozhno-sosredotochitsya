@@ -229,16 +229,13 @@
     right: 29px;
   }
 
-  .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
   .header__theme-menu {
     padding-block-start: 188px;
   }
 
   .header__title {
     margin-block-start: 173px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description {
