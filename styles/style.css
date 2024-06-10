@@ -26,11 +26,6 @@
   inline-size: 25px;
 }
 
-.page.theme_light .decorated-zone::before {
-  border-inline-end: 1px solid var(--main-text-color);
-  border-block-start: 1px solid var(--main-text-color);
-}
-
 .decorated-zone::after {
   content: "";
   position: absolute;
@@ -49,10 +44,6 @@
   color: var(--accent-color);
   line-height: 25px;
   text-transform: uppercase;
-}
-
-.page.theme_light .rec {
-  display: none;
 }
 
 .rec::after {
