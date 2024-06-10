@@ -3,6 +3,7 @@
   --main-text-color: #f1b2ce;
   --subtitle-color: #000028;
   --main-title-color: #db00ff;
+  --accent-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
   --weight-bold: 700;
 }
